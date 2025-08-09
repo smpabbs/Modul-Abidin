@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civic Level 8 | E-Modul SMP Al Abidin</title>
+    <title>ICT Progul Level 7 | E-Modul SMP Al Abidin</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -382,25 +382,25 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h2>Civic Level 8</h2>
+                <h2>ICT Progul Level 7</h2>
             </div>
             
             <ul class="chapter-list">
-                <!-- <li class="chapter-item">
-                    <a href="#" class="chapter-link active" onclick="loadChapter(0, '1. Integers')">
+                <li class="chapter-item">
+                    <a href="#" class="chapter-link active" onclick="loadChapter(0, '1. Introducing ICT')">
                         <span class="chapter-number">1</span>
-                        <span class="chapter-name">Integers</span>
+                        <span class="chapter-name">Introducing ICT</span>
                     </a>
                 </li>
-                <li class="chapter-item">
-                    <a href="#" class="chapter-link" onclick="loadChapter(1, '2. Fraction')">
+                <!-- <li class="chapter-item">
+                    <a href="#" class="chapter-link" onclick="loadChapter(1, '2. Computer System')">
                         <span class="chapter-number">2</span>
-                        <span class="chapter-name">Fraction</span>
+                        <span class="chapter-name">Computer System</span>
                     </a>
                 </li> -->
                 <li class="chapter-item">
-                    <a href="#" class="chapter-link" onclick="loadChapter(2, '1. comingSoon')">
-                        <span class="chapter-number">1</span>
+                    <a href="#" class="chapter-link" onclick="loadChapter(2, '2. comingSoon')">
+                        <span class="chapter-number">2</span>
                         <span class="chapter-name">comingSoon</span>
                     </a>
                 </li>
@@ -425,7 +425,7 @@
                 <div class="module-header">
                     <div class="module-title">
                         <h1 id="chapterTitle"></h1>
-                        <p>Civic Level 8 • SMP Al Abidin Surakarta</p>
+                        <p>ICT Progul Level 7 • SMP Al Abidin Surakarta</p>
                     </div>
                     <div class="module-nav">
                         <button class="nav-button outline" id="prevBtn" onclick="previousChapter()">
@@ -441,7 +441,7 @@
                 </div>
 
                 <div class="module-container">
-                    <iframe class="module-iframe" id="moduleFrame" src="https://itch.io/embed-upload/14258714?color=333333" allowfullscreen></iframe>
+                    <iframe class="module-iframe" id="moduleFrame" src="https://itch.io/embed-upload/14474692?color=333333" allowfullscreen></iframe>
                     <div class="coming-soon" id="comingSoon" style="display: none;">
                         <i class="fas fa-clock"></i>
                         <h3 id="comingSoonTitle">Chapter Akan Hadir</h3>
@@ -452,7 +452,7 @@
                 <div class="progress-container">
                     <div class="progress-bar" id="progressBar"></div>
                 </div>
-                <div class="progress-text" id="progressText">1 dari 1 chapter selesai</div>
+                <div class="progress-text" id="progressText">1 dari 2 chapter selesai</div>
             </div>
         </main>
     </div>
@@ -460,22 +460,22 @@
     <script>
         // Chapter data
         const chapters = [
+            { 
+                title: "1. Introducing ICT", 
+                url: "https://itch.io/embed-upload/14474692?color=333333",
+                available: true
+            },
             // { 
-            //     title: "1. Integers", 
-            //     url: "https://itch.io/embed-upload/14258714?color=333333",
-            //     available: true
-            // },
-            // { 
-            //     title: "2. Fraction", 
-            //     url: "https://itch.io/embed-upload/14557987?color=333333",
+            //     title: "2. Computer System", 
+            //     url: "https://itch.io/embed-upload/14384147?color=333333",
             //     available: true,
             //     // message: "Chapter 2 akan segera hadir dalam waktu dekat"
             // },
             { 
-                title: "1. Coming Soon", 
+                title: "2. Coming Soon", 
                 url: "",
                 available: false,
-                message: "Chapter 1 sedang dalam proses pengembangan"
+                message: "Chapter 2 sedang dalam proses pengembangan"
             }
         ];
 
