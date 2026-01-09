@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science Level 7 | E-Modul SMP Al Abidin</title>
+    <title>Science | E-Modul SMP Al Abidin</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -11,12 +11,12 @@
     <!-- CSS Kustom -->
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
+            --primary-color: #27ae60;
+            --secondary-color: #2ecc71;
             --accent-color: #e74c3c;
             --light-color: #f8f9fa;
             --dark-color: #2f3640;
-            --success-color: #2ecc71;
+            --success-color: #27ae60;
         }
         
         * {
@@ -28,7 +28,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--light-color);
-            color: var(--primary-color);
+            color: var(--dark-color);
             line-height: 1.6;
         }
         
@@ -65,6 +65,16 @@
             margin-left: 10px;
         }
         
+        .subject-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            font-weight: 300;
+        }
+        
         .chapter-list {
             list-style: none;
         }
@@ -85,7 +95,7 @@
         }
         
         .chapter-link:hover, .chapter-link.active {
-            background: rgba(52,152,219,0.2);
+            background: rgba(255,255,255,0.2);
             color: white;
         }
         
@@ -102,8 +112,8 @@
         }
         
         .chapter-link.active .chapter-number {
-            background: var(--secondary-color);
-            color: white;
+            background: white;
+            color: var(--primary-color);
             font-weight: 600;
         }
         
@@ -188,22 +198,22 @@
         }
         
         .nav-button.primary {
-            background: var(--secondary-color);
+            background: var(--primary-color);
             color: white;
         }
         
         .nav-button.primary:hover {
-            background: #2980b9;
+            background: #219653;
         }
         
         .nav-button.outline {
             background: transparent;
-            border: 1px solid var(--secondary-color);
-            color: var(--secondary-color);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
         }
         
         .nav-button.outline:hover {
-            background: rgba(52,152,219,0.1);
+            background: rgba(39,174,96,0.1);
         }
         
         .nav-button.refresh {
@@ -227,6 +237,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             overflow: hidden;
             position: relative;
+            min-height: 500px;
         }
         
         .module-iframe {
@@ -234,6 +245,30 @@
             height: calc(100vh - 220px);
             min-height: 500px;
             border: none;
+        }
+        
+        .module-info {
+            padding: 25px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .chapter-info {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .info-item i {
+            color: var(--primary-color);
         }
         
         .coming-soon {
@@ -246,7 +281,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.95);
             z-index: 10;
             padding: 20px;
             text-align: center;
@@ -254,7 +289,7 @@
         
         .coming-soon i {
             font-size: 3rem;
-            color: var(--secondary-color);
+            color: var(--primary-color);
             margin-bottom: 15px;
         }
         
@@ -281,7 +316,7 @@
         .progress-bar {
             height: 100%;
             background: var(--success-color);
-            width: 12.5%;
+            width: 33.3%;
             transition: width 0.3s ease;
         }
         
@@ -330,6 +365,11 @@
             .nav-button {
                 flex: 1;
                 justify-content: center;
+            }
+            
+            .chapter-info {
+                flex-direction: column;
+                gap: 10px;
             }
         }
         
@@ -382,26 +422,29 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h2>Science Level 7</h2>
+                <div>
+                    <h2>Science</h2>
+                    <div class="subject-badge">SMP Al Abidin</div>
+                </div>
             </div>
             
             <ul class="chapter-list">
-                <!-- <li class="chapter-item">
-                    <a href="#" class="chapter-link active" onclick="loadChapter(0, '1. Integers')">
-                        <span class="chapter-number">1</span>
-                        <span class="chapter-name">Integers</span>
+                <li class="chapter-item">
+                    <a href="#" class="chapter-link active" onclick="loadChapter(0)">
+                        <span class="chapter-number">5</span>
+                        <span class="chapter-name">Classification of Organisms</span>
                     </a>
                 </li>
                 <li class="chapter-item">
-                    <a href="#" class="chapter-link" onclick="loadChapter(1, '2. Fraction')">
-                        <span class="chapter-number">2</span>
-                        <span class="chapter-name">Fraction</span>
+                    <a href="#" class="chapter-link" onclick="loadChapter(1)">
+                        <span class="chapter-number">6</span>
+                        <span class="chapter-name">Ecology and Biodiversity in Indonesia</span>
                     </a>
-                </li> -->
+                </li>
                 <li class="chapter-item">
-                    <a href="#" class="chapter-link" onclick="loadChapter(2, '3. comingSoon')">
-                        <span class="chapter-number">1</span>
-                        <span class="chapter-name">comingSoon</span>
+                    <a href="#" class="chapter-link" onclick="loadChapter(2)">
+                        <span class="chapter-number">7</span>
+                        <span class="chapter-name">Solar System</span>
                     </a>
                 </li>
             </ul>
@@ -424,8 +467,8 @@
             <div class="module-viewer">
                 <div class="module-header">
                     <div class="module-title">
-                        <h1 id="chapterTitle"></h1>
-                        <p>Science Level 7 • SMP Al Abidin Surakarta</p>
+                        <h1 id="chapterTitle">Chapter 5: Classification of Organisms</h1>
+                        <p>Science • SMP Al Abidin Surakarta</p>
                     </div>
                     <div class="module-nav">
                         <button class="nav-button outline" id="prevBtn" onclick="previousChapter()">
@@ -441,7 +484,27 @@
                 </div>
 
                 <div class="module-container">
-                    <iframe class="module-iframe" id="moduleFrame" src="https://itch.io/embed-upload/14258714?color=333333" allowfullscreen></iframe>
+                    <div class="module-info">
+                        <div id="chapterDescription">
+                            <h3>Chapter Overview</h3>
+                            <p>Learn about the classification system of living organisms and their characteristics.</p>
+                        </div>
+                        <div class="chapter-info">
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Estimated: 45 minutes</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-book-open"></i>
+                                <span>Interactive Module</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Grade 7 Science</span>
+                            </div>
+                        </div>
+                    </div>
+                    <iframe class="module-iframe" id="moduleFrame" src="https://itch.io/embed-upload/16045215?color=333333" allowfullscreen></iframe>
                     <div class="coming-soon" id="comingSoon" style="display: none;">
                         <i class="fas fa-clock"></i>
                         <h3 id="comingSoonTitle">Chapter Akan Hadir</h3>
@@ -452,30 +515,40 @@
                 <div class="progress-container">
                     <div class="progress-bar" id="progressBar"></div>
                 </div>
-                <div class="progress-text" id="progressText">1 dari 1 chapter selesai</div>
+                <div class="progress-text" id="progressText">1 dari 3 chapter selesai</div>
             </div>
         </main>
     </div>
 
     <script>
-        // Chapter data
+        // Chapter data untuk Science
         const chapters = [
-            // { 
-            //     title: "1. Integers", 
-            //     url: "https://itch.io/embed-upload/14258714?color=333333",
-            //     available: true
-            // },
-            // { 
-            //     title: "2. Fraction", 
-            //     url: "https://itch.io/embed-upload/14557987?color=333333",
-            //     available: true,
-            //     // message: "Chapter 2 akan segera hadir dalam waktu dekat"
-            // },
             { 
-                title: "1. Coming Soon", 
-                url: "",
-                available: false,
-                message: "Chapter 1 sedang dalam proses pengembangan"
+                title: "Chapter 5: Classification of Organisms", 
+                url: "https://itch.io/embed-upload/16045215?color=333333",
+                available: true,
+                description: "Learn about the classification system of living organisms and their characteristics.",
+                duration: "45 minutes",
+                type: "Interactive Module",
+                grade: "Grade 7 Science"
+            },
+            { 
+                title: "Chapter 6: Ecology and Biodiversity in Indonesia", 
+                url: "https://itch.io/embed-upload/16069591?color=333333",
+                available: true,
+                description: "Explore the rich biodiversity and ecological systems in Indonesia.",
+                duration: "50 minutes",
+                type: "Interactive Module",
+                grade: "Grade 7 Science"
+            },
+            { 
+                title: "Chapter 7: Solar System", 
+                url: "https://itch.io/embed-upload/16026152?color=333333",
+                available: true,
+                description: "Discover the planets, stars, and celestial bodies in our solar system.",
+                duration: "60 minutes",
+                type: "Interactive Module",
+                grade: "Grade 7 Science"
             }
         ];
 
@@ -488,6 +561,7 @@
         const comingSoon = document.getElementById('comingSoon');
         const comingSoonTitle = document.getElementById('comingSoonTitle');
         const comingSoonText = document.getElementById('comingSoonText');
+        const chapterDescription = document.getElementById('chapterDescription');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const refreshBtn = document.getElementById('refreshBtn');
@@ -501,16 +575,39 @@
         function loadChapter(index) {
             if (index >= 0 && index < totalChapters) {
                 currentChapter = index;
-                chapterTitle.textContent = chapters[index].title;
+                const chapter = chapters[index];
                 
-                if (chapters[index].available) {
-                    moduleFrame.src = chapters[index].url;
+                // Update title
+                chapterTitle.textContent = chapter.title;
+                
+                // Update description
+                chapterDescription.innerHTML = `
+                    <h3>Chapter Overview</h3>
+                    <p>${chapter.description}</p>
+                `;
+                
+                // Update info items
+                document.querySelectorAll('.info-item')[0].innerHTML = `
+                    <i class="fas fa-clock"></i>
+                    <span>Estimated: ${chapter.duration}</span>
+                `;
+                
+                document.querySelectorAll('.info-item')[2].innerHTML = `
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>${chapter.grade}</span>
+                `;
+                
+                // Load content
+                if (chapter.available) {
+                    moduleFrame.src = chapter.url;
                     moduleFrame.style.display = 'block';
                     comingSoon.style.display = 'none';
+                    document.querySelector('.module-info').style.display = 'block';
                 } else {
                     moduleFrame.style.display = 'none';
-                    comingSoonTitle.textContent = chapters[index].title;
-                    comingSoonText.textContent = chapters[index].message;
+                    document.querySelector('.module-info').style.display = 'none';
+                    comingSoonTitle.textContent = chapter.title;
+                    comingSoonText.textContent = chapter.message || "Chapter ini sedang dalam pengembangan dan akan segera tersedia.";
                     comingSoon.style.display = 'flex';
                 }
                 
@@ -539,7 +636,9 @@
             if (chapters[currentChapter].available) {
                 // Add timestamp to URL to force refresh
                 const timestamp = new Date().getTime();
-                moduleFrame.src = chapters[currentChapter].url + (chapters[currentChapter].url.includes('?') ? '&' : '?') + 't=' + timestamp;
+                const url = chapters[currentChapter].url;
+                const separator = url.includes('?') ? '&' : '?';
+                moduleFrame.src = url + separator + 't=' + timestamp;
                 
                 // Add animation to refresh button
                 refreshBtn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Memuat...';
@@ -553,6 +652,14 @@
         function updateNavButtons() {
             prevBtn.disabled = currentChapter === 0;
             nextBtn.disabled = currentChapter === totalChapters - 1;
+            
+            // Update button text based on position
+            if (currentChapter === 0) {
+                prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i> Chapter Sebelumnya';
+            }
+            if (currentChapter === totalChapters - 1) {
+                nextBtn.innerHTML = 'Chapter Selanjutnya <i class="fas fa-chevron-right"></i>';
+            }
         }
 
         // Update progress
