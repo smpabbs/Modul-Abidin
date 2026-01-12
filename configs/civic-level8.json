@@ -1,0 +1,50 @@
+{
+  "subject": "CIVIC Level 8",
+  "grade": "8",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Pancasila in the Life of My Nation",
+      "url": "https://itch.io/embed-upload/14668422?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "The Foundational Guideline of My Nation",
+      "url": "https://itch.io/embed-upload/14754166?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Rules in My Country",
+      "url": "https://itch.io/embed-upload/14754535?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Preserving My Nation's Culture",
+      "url": "https://itch.io/embed-upload/14754557?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Safeguarding the Unity of My Nation",
+      "url": "https://itch.io/embed-upload/14754573?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "The Rules in My Country",
+      "url": "https://itch.io/embed-upload/16022680?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Preserving My Nation's Culture",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

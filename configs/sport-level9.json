@@ -1,0 +1,62 @@
+{
+  "subject": "SPORT Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Basketball game",
+      "url": "https://itch.io/embed-upload/14413727?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Athletics",
+      "url": "https://itch.io/embed-upload/14935354?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Gymnastics",
+      "url": "https://itch.io/embed-upload/14937146?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Martial Arts Activities",
+      "url": "https://itch.io/embed-upload/15305611?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Physical Activity",
+      "url": "https://itch.io/embed-upload/15305611?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Softball",
+      "url": "https://itch.io/embed-upload/16022419?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Senam Aerobik",
+      "url": "https://itch.io/embed-upload/16022480?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Penyakit Tidak Menular dan Pencegahan Penyakit Melalui Aktivitas Fisik",
+      "url": "https://itch.io/embed-upload/16070509?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "P3K",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

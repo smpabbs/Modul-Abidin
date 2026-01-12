@@ -1,0 +1,62 @@
+{
+  "subject": "ICT Level 8",
+  "grade": "8",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Introduction to Tinkercad's Circuit: Basic Electronics Component",
+      "url": "https://itch.io/embed-upload/14868919?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Pengenalan ESP32",
+      "url": "https://esp32-modul.vercel.app/",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Simulasi dan Praktek ESP32 untuk Rangkaian LED dan Aktuator dengan Control Push Button",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Simulasi dan Praktek Rangkaian Sensor Suhu dan Kelembapan DHT22 dengan ESP32",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Simulasi dan Praktek Rangkaian Sensor Cahaya dan Sensor Jarak dengan ESP32",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Pengenalan MIT App Inventor",
+      "url": "https://itch.io/embed-upload/16022610?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Membuat App Dashboard Control Rangkaian LED dan Aktuator berbasis Android",
+      "url": "https://itch.io/embed-upload/16040734?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Membuat App Dashboard Monitoring Rangkaian Sensor berbasis Android",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Membuat App Dashboard Control dan Monitoring Rangkaian ESP32 berbasis Android",
+      "url": "https://itch.io/embed-upload/16040782?color=333333",
+      "available": true,
+      "description": ""
+    }
+  ]
+}

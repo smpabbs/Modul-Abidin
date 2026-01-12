@@ -1,0 +1,26 @@
+{
+  "subject": "CIVIC Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "The Relationship Pancasila",
+      "url": "https://itch.io/embed-upload/14335901?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Freedom of Expression for Citizens",
+      "url": "https://itch.io/embed-upload/16079264?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Preserving and Maintaining Traditions, Local Wisdom, and Culture",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

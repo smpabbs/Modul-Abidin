@@ -1,0 +1,50 @@
+{
+  "subject": "SPORT Level 7",
+  "grade": "7",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Football",
+      "url": "https://itch.io/embed-upload/14569011?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Athletics",
+      "url": "https://itch.io/embed-upload/14735764?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Gymnastics",
+      "url": "https://itch.io/embed-upload/14735823?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Bola Voli",
+      "url": "https://itch.io/embed-upload/16070504?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Senam Aerobik",
+      "url": "https://itch.io/embed-upload/16021933?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Pola Makan Sehat Bergizi Seimbang",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Pertumbuhan dan Perkembangan Remaja",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

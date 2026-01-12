@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator JSON E-Modul</title>
+    <style>
+        /* SIMPLIFIED CSS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #2c3e50; margin-bottom: 10px; }
+        
+        .mode-selector { display: flex; gap: 10px; margin-bottom: 20px; justify-content: center; }
+        .mode-btn { padding: 10px 20px; background: #ddd; border: none; border-radius: 5px; cursor: pointer; }
+        .mode-btn.active { background: #3498db; color: white; }
+        
+        .mode-content { display: none; }
+        .mode-content.active { display: block; }
+        
+        .upload-area {
+            border: 3px dashed #3498db;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            background: #f8fafc;
+            cursor: pointer;
+        }
+        
+        .upload-area:hover { background: #f0f7ff; }
+        
+        .btn {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .btn:hover { background: #2980b9; }
+        
+        .preview-section { margin: 20px 0; display: none; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #2c3e50; color: white; }
+        
+        .loading { display: none; text-align: center; padding: 30px; }
+        .output-section { display: none; margin-top: 20px; padding: 20px; background: #f0f9f0; border-radius: 5px; }
+        
+        .file-item {
+            background: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .error { background: #ffe6e6; color: #c00; padding: 10px; border-radius: 5px; margin: 10px 0; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Generator JSON E-Modul</h1>
+            <p>Generate file JSON dari Excel/CSV</p>
+        </div>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="switchMode('excel')">Excel Import</button>
+            <button class="mode-btn" onclick="switchMode('manual')">Input Manual</button>
+        </div>
+        
+        <!-- Excel Mode -->
+        <div id="excelMode" class="mode-content active">
+            <div style="text-align: center; margin: 20px 0;">
+                <button class="btn" onclick="downloadTemplate()">📥 Download Template Excel</button>
+            </div>
+            
+            <div class="upload-area" onclick="document.getElementById('fileInput').click()" 
+                 ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                <div style="font-size: 48px; margin-bottom: 20px;">📁</div>
+                <h3>Klik atau drag & drop file Excel/CSV</h3>
+                <p>Format: subject, level, chapter_title, url, description</p>
+                <p id="fileName" style="color: #3498db; margin-top: 10px;"></p>
+            </div>
+            
+            <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" style="display: none;" onchange="handleFileSelect(event)">
+            
+            <div class="preview-section" id="previewSection">
+                <h3>📋 Preview Data</h3>
+                <div id="dataPreview"></div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn" onclick="generateFromExcel()">Generate JSON Files</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Manual Mode -->
+        <div id="manualMode" class="mode-content">
+            <div style="text-align: center; margin: 20px 0;">
+                <button class="btn" onclick="addNewSubject()">➕ Tambah Mata Pelajaran</button>
+            </div>
+            <div id="manualSubjects"></div>
+            <div style="text-align: center; margin: 20px 0;">
+                <button class="btn" onclick="generateFromManual()">Generate JSON Files</button>
+            </div>
+        </div>
+        
+        <div class="error" id="errorAlert"></div>
+        
+        <div class="loading" id="loading">
+            <div style="font-size: 48px; margin-bottom: 20px;">⏳</div>
+            <p>Sedang memproses...</p>
+        </div>
+        
+        <div class="output-section" id="outputSection">
+            <h3>✅ File JSON Berhasil Dibuat</h3>
+            <p>Total <span id="fileCount">0</span> file JSON telah dibuat.</p>
+            <div id="fileList"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="downloadZip()">📥 Download ZIP</button>
+                <button class="btn" onclick="resetGenerator()">🔄 Generate Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Templates -->
+    <template id="subjectTemplate">
+        <div class="subject-form" style="background: #f8f9fa; padding: 20px; margin: 10px 0; border-radius: 5px;">
+            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <input type="text" placeholder="Nama Mata Pelajaran" class="subject-name" style="flex: 2; padding: 8px;">
+                <select class="subject-level" style="flex: 1; padding: 8px;">
+                    <option value="7">Level 7</option>
+                    <option value="8">Level 8</option>
+                    <option value="9">Level 9</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <input type="text" placeholder="Author" class="subject-author" style="width: 100%; padding: 8px;">
+            </div>
+            <div class="chapters-list"></div>
+            <div style="text-align: right; margin-top: 10px;">
+                <button class="btn" onclick="addChapter(this)" style="background: #2ecc71;">➕ Chapter</button>
+                <button class="btn" onclick="removeSubject(this)" style="background: #e74c3c;">🗑 Hapus</button>
+            </div>
+        </div>
+    </template>
+    
+    <template id="chapterTemplate">
+        <div class="chapter-item" style="background: white; padding: 15px; margin: 10px 0; border-radius: 5px; border: 1px solid #ddd;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <input type="text" placeholder="Judul Chapter" class="chapter-title" style="flex: 1; padding: 8px;">
+                <button onclick="removeChapter(this)" style="background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">×</button>
+            </div>
+            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                <input type="url" placeholder="URL (kosong jika belum ada)" class="chapter-url" style="flex: 2; padding: 8px;">
+                <div style="flex: 1; padding: 8px; background: #f8f9fa; border-radius: 3px;">
+                    Status: <span class="availability-text">Belum tersedia</span>
+                </div>
+            </div>
+            <input type="text" placeholder="Deskripsi (opsional)" class="chapter-desc" style="width: 100%; padding: 8px;">
+        </div>
+    </template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    
+    <script>
+        // Global variables
+        let uploadedData = [];
+        let generatedZip = null;
+        
+        // Switch between modes
+        function switchMode(mode) {
+            // Update buttons
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update content
+            document.getElementById('excelMode').classList.remove('active');
+            document.getElementById('manualMode').classList.remove('active');
+            document.getElementById(mode + 'Mode').classList.add('active');
+            
+            resetGenerator();
+        }
+        
+        // Download template
+        function downloadTemplate() {
+            const templateData = [
+                ['subject', 'level', 'chapter_title', 'url', 'description'],
+                ['Mathematics', '7', '1. Bilangan Bulat', 'https://example.com/math7/ch1', 'Memahami konsep bilangan bulat'],
+                ['Mathematics', '7', '2. Pecahan', '', 'Operasi pecahan dan desimal'],
+                ['Mathematics', '8', '1. Aljabar Dasar', 'https://example.com/math8/ch1', 'Pengenalan variabel dan persamaan'],
+                ['Science', '7', '1. Pengukuran', 'https://example.com/science7/ch1', 'Konsep pengukuran dan satuan']
+            ];
+            
+            const ws = XLSX.utils.aoa_to_sheet(templateData);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, "Template");
+            XLSX.writeFile(wb, "template-emodul.xlsx");
+        }
+        
+        // File handling
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.currentTarget.style.background = '#e3f2fd';
+        }
+        
+        function handleDragLeave(e) {
+            e.preventDefault();
+            e.currentTarget.style.background = '#f8fafc';
+        }
+        
+        function handleDrop(e) {
+            e.preventDefault();
+            e.currentTarget.style.background = '#f8fafc';
+            
+            if (e.dataTransfer.files.length) {
+                handleFile(e.dataTransfer.files[0]);
+            }
+        }
+        
+        function handleFileSelect(e) {
+            if (e.target.files.length) {
+                handleFile(e.target.files[0]);
+            }
+        }
+        
+        function handleFile(file) {
+            resetGenerator();
+            document.getElementById('fileName').textContent = `File: ${file.name}`;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    if (file.name.endsWith('.csv')) {
+                        // Parse CSV
+                        const text = e.target.result;
+                        const lines = text.split('\n');
+                        const data = lines.map(line => line.split(',').map(cell => cell.trim()));
+                        processExcelData(data);
+                    } else {
+                        // Parse Excel
+                        const data = new Uint8Array(e.target.result);
+                        const workbook = XLSX.read(data, {type: 'array'});
+                        const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+                        const jsonData = XLSX.utils.sheet_to_json(firstSheet, {header: 1});
+                        processExcelData(jsonData);
+                    }
+                } catch (error) {
+                    showError('Format file tidak valid: ' + error.message);
+                }
+            };
+            
+            if (file.name.endsWith('.csv')) {
+                reader.readAsText(file);
+            } else {
+                reader.readAsArrayBuffer(file);
+            }
+        }
+        
+        function processExcelData(data) {
+            uploadedData = [];
+            
+            // Skip header row
+            for (let i = 1; i < data.length; i++) {
+                const row = data[i];
+                if (row && row.length >= 3) {
+                    const subject = (row[0] || '').toString().trim();
+                    const level = (row[1] || '').toString().trim();
+                    const chapterTitle = (row[2] || '').toString().trim();
+                    const url = (row[3] || '').toString().trim();
+                    const description = (row[4] || '').toString().trim();
+                    
+                    if (subject && level && chapterTitle) {
+                        const available = url.length > 0 && 
+                                         (url.startsWith('http://') || url.startsWith('https://'));
+                        
+                        uploadedData.push({
+                            subject,
+                            level,
+                            chapterTitle,
+                            url,
+                            description,
+                            available
+                        });
+                    }
+                }
+            }
+            
+            if (uploadedData.length === 0) {
+                showError('Tidak ada data valid ditemukan.');
+                return;
+            }
+            
+            showPreview();
+        }
+        
+        function showPreview() {
+            const subjects = {};
+            
+            uploadedData.forEach(item => {
+                const key = `${item.subject}-${item.level}`;
+                if (!subjects[key]) {
+                    subjects[key] = {
+                        subject: item.subject,
+                        level: item.level,
+                        total: 0,
+                        available: 0
+                    };
+                }
+                subjects[key].total++;
+                if (item.available) subjects[key].available++;
+            });
+            
+            let html = '<table>';
+            html += '<tr><th>Subject</th><th>Level</th><th>Chapters</th><th>Tersedia</th></tr>';
+            
+            Object.keys(subjects).forEach(key => {
+                const item = subjects[key];
+                html += `<tr>
+                    <td>${item.subject}</td>
+                    <td>Level ${item.level}</td>
+                    <td>${item.total}</td>
+                    <td>${item.available}/${item.total}</td>
+                </tr>`;
+            });
+            
+            html += '</table>';
+            document.getElementById('dataPreview').innerHTML = html;
+            document.getElementById('previewSection').style.display = 'block';
+        }
+        
+        function generateFromExcel() {
+            if (uploadedData.length === 0) {
+                showError('Tidak ada data untuk diproses.');
+                return;
+            }
+            
+            generateJSONFiles(uploadedData, 'excel');
+        }
+        
+        // Manual mode functions
+        function addNewSubject() {
+            const template = document.getElementById('subjectTemplate');
+            const clone = template.content.cloneNode(true);
+            document.getElementById('manualSubjects').appendChild(clone);
+        }
+        
+        function addChapter(button) {
+            const subjectForm = button.closest('.subject-form');
+            const chaptersList = subjectForm.querySelector('.chapters-list');
+            const template = document.getElementById('chapterTemplate');
+            const clone = template.content.cloneNode(true);
+            
+            // Add URL change listener
+            const urlInput = clone.querySelector('.chapter-url');
+            const statusSpan = clone.querySelector('.availability-text');
+            
+            urlInput.addEventListener('input', function() {
+                const hasUrl = this.value.trim().length > 0 && 
+                              (this.value.startsWith('http://') || this.value.startsWith('https://'));
+                statusSpan.textContent = hasUrl ? 'Tersedia' : 'Belum tersedia';
+                statusSpan.style.color = hasUrl ? 'green' : 'red';
+            });
+            
+            chaptersList.appendChild(clone);
+        }
+        
+        function removeChapter(button) {
+            button.closest('.chapter-item').remove();
+        }
+        
+        function removeSubject(button) {
+            if (document.querySelectorAll('.subject-form').length <= 1) {
+                showError('Minimal harus ada satu mata pelajaran.');
+                return;
+            }
+            button.closest('.subject-form').remove();
+        }
+        
+        function generateFromManual() {
+            const data = [];
+            
+            document.querySelectorAll('.subject-form').forEach(subjectForm => {
+                const subjectName = subjectForm.querySelector('.subject-name').value.trim();
+                const level = subjectForm.querySelector('.subject-level').value;
+                const author = subjectForm.querySelector('.subject-author').value.trim() || 'Tim Pengajar';
+                
+                if (!subjectName) return;
+                
+                subjectForm.querySelectorAll('.chapter-item').forEach(chapterItem => {
+                    const chapterTitle = chapterItem.querySelector('.chapter-title').value.trim();
+                    const url = chapterItem.querySelector('.chapter-url').value.trim();
+                    const description = chapterItem.querySelector('.chapter-desc').value.trim();
+                    
+                    if (!chapterTitle) return;
+                    
+                    const available = url.length > 0 && 
+                                     (url.startsWith('http://') || url.startsWith('https://'));
+                    
+                    data.push({
+                        subject: subjectName,
+                        level: level,
+                        chapterTitle: chapterTitle,
+                        url: url,
+                        description: description,
+                        available: available,
+                        author: author
+                    });
+                });
+            });
+            
+            if (data.length === 0) {
+                showError('Tidak ada data. Tambahkan minimal satu chapter.');
+                return;
+            }
+            
+            generateJSONFiles(data, 'manual');
+        }
+        
+        // Common generation function
+        function generateJSONFiles(data, source) {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('previewSection').style.display = 'none';
+            document.getElementById('outputSection').style.display = 'none';
+            
+            setTimeout(() => {
+                const subjects = {};
+                
+                // Group data by subject and level
+                data.forEach(item => {
+                    const key = `${item.subject}-${item.level}`;
+                    
+                    if (!subjects[key]) {
+                        subjects[key] = {
+                            subject: `${item.subject} Level ${item.level}`,
+                            grade: item.level,
+                            school: "SMP Al Abidin Surakarta",
+                            author: item.author || "Tim Pengajar",
+                            chapters: []
+                        };
+                    }
+                    
+                    subjects[key].chapters.push({
+                        title: item.chapterTitle,
+                        url: item.url,
+                        available: item.available,
+                        description: item.description || ''
+                    });
+                });
+                
+                // Create ZIP
+                const zip = new JSZip();
+                const configsFolder = zip.folder("configs");
+                
+                let fileCount = 0;
+                let fileListHTML = '';
+                
+                Object.keys(subjects).forEach(key => {
+                    const config = subjects[key];
+                    const subjectName = config.subject.split(' ')[0].toLowerCase();
+                    const fileName = `${subjectName}-level${config.grade}.json`;
+                    
+                    const jsonContent = JSON.stringify(config, null, 2);
+                    configsFolder.file(fileName, jsonContent);
+                    
+                    fileCount++;
+                    const availableChapters = config.chapters.filter(c => c.available).length;
+                    fileListHTML += `
+                        <div class="file-item">
+                            <strong>${fileName}</strong><br>
+                            <small>${config.chapters.length} chapters (${availableChapters} tersedia)</small>
+                        </div>
+                    `;
+                });
+                
+                // Update UI
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('fileCount').textContent = fileCount;
+                document.getElementById('fileList').innerHTML = fileListHTML;
+                document.getElementById('outputSection').style.display = 'block';
+                
+                // Save zip reference
+                generatedZip = zip;
+                
+            }, 1000);
+        }
+        
+        function downloadZip() {
+            if (generatedZip) {
+                generatedZip.generateAsync({type: "blob"})
+                    .then(function(content) {
+                        saveAs(content, `emodul-configs-${Date.now()}.zip`);
+                    });
+            }
+        }
+        
+        function resetGenerator() {
+            uploadedData = [];
+            generatedZip = null;
+            
+            // Reset UI
+            document.getElementById('fileName').textContent = '';
+            document.getElementById('dataPreview').innerHTML = '';
+            document.getElementById('previewSection').style.display = 'none';
+            document.getElementById('outputSection').style.display = 'none';
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('errorAlert').style.display = 'none';
+            
+            // Reset file input
+            document.getElementById('fileInput').value = '';
+            
+            // Clear manual mode
+            document.getElementById('manualSubjects').innerHTML = '';
+            
+            console.log('Generator di-reset');
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('errorAlert');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Generator JSON E-Modul siap digunakan!');
+            addNewSubject(); // Add initial subject for manual mode
+        });
+    </script>
+</body>
+</html>

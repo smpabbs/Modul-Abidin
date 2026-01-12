@@ -1,0 +1,44 @@
+{
+  "subject": "INFORMATIKA non ICT Level 8",
+  "grade": "8",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Computational Thinking",
+      "url": "https://itch.io/embed-upload/14456819?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Understanding Excel Interface & Basic Formula Ms. Excel",
+      "url": "https://itch.io/embed-upload/14772236?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Pengenalan Inkscape",
+      "url": "https://www.canva.com/design/DAG9OxUmtEw/oftIQ1iLMZJRBYpt--F3Mg/view",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Pengenalan Construct 3",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Projek membuat Flappy Bird",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Projek membuat Space Shooter's",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

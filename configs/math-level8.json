@@ -1,0 +1,44 @@
+{
+  "subject": "MATH Level 8",
+  "grade": "8",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Sequences",
+      "url": "https://itch.io/embed-upload/14480057?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Powers and Root",
+      "url": "https://itch.io/embed-upload/14878429?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "System of Linear Equations in Two Variables (SLE)",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Pythagorean Theorem",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Circle",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Polyhedron",
+      "url": "https://itch.io/embed-upload/16022906?color=333333",
+      "available": true,
+      "description": ""
+    }
+  ]
+}

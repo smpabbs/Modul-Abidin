@@ -1,0 +1,38 @@
+{
+  "subject": "ICT Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Introduction Website & HTML",
+      "url": "https://itch.io/embed-upload/14468306?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "CSS",
+      "url": "https://itch.io/embed-upload/14906623?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Bootstrap",
+      "url": "https://itch.io/embed-upload/15381187?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Javascript",
+      "url": "https://www.canva.com/design/DAG9Rm-VmPQ/ADzdZMXVAZ-q3Wio2V30Zg/edit?utm_content=DAG9Rm-VmPQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Jquery",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

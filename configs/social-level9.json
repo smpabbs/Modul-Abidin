@@ -1,0 +1,26 @@
+{
+  "subject": "SOCIAL Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Human and Transformation",
+      "url": "https://itch.io/embed-upload/14511584?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "The Challenge of Indonesia Development",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "World Cooperation",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

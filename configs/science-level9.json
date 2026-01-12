@@ -1,0 +1,62 @@
+{
+  "subject": "SCIENCE Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Growth and Development",
+      "url": "https://itch.io/embed-upload/14470178?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Human Reproductive System",
+      "url": "https://itch.io/embed-upload/14954270?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Coordination System and Homeostasist",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Pressure",
+      "url": "https://itch.io/embed-upload/15670807?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Electricity",
+      "url": "https://itch.io/embed-upload/15670902?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Magnetism and Alternative Energy",
+      "url": "https://itch.io/embed-upload/16076937?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Chemical Reaction and Its Dinamic",
+      "url": "https://itch.io/embed-upload/16039967?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Inheritance and Biotechnology",
+      "url": "https://itch.io/embed-upload/16062595?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Environmental Issues",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

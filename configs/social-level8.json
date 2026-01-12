@@ -1,0 +1,32 @@
+{
+  "subject": "SOCIAL Level 8",
+  "grade": "8",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Nature and Its Potential",
+      "url": "https://itch.io/embed-upload/14260697?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Plurality of Indonesian Society",
+      "url": "https://itch.io/embed-upload/14877980?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Nationalism and National Identity",
+      "url": "https://itch.io/embed-upload/16052695?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Indonesias Economic Development",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

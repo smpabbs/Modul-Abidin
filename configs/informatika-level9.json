@@ -1,0 +1,20 @@
+{
+  "subject": "INFORMATIKA non ICT Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Computational Thinking",
+      "url": "https://itch.io/embed-upload/14569035?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "IOT Project",
+      "url": "https://www.canva.com/design/DAG9UszRo1Y/-ZYZLKgTsa-kkiULXKShCw/edit?utm_content=DAG9UszRo1Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      "available": true,
+      "description": ""
+    }
+  ]
+}

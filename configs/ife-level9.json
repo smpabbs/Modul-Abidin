@@ -1,0 +1,38 @@
+{
+  "subject": "IFE Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Faith in The Day of Judgment ( Yaumul Qiyamah )",
+      "url": "https://itch.io/embed-upload/14736957?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Spreading Kindness and  Compassion as Khalifatullah fil Ard",
+      "url": "https://itch.io/embed-upload/16022765?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Obtaining Inner Peace Through Belief in Qada' and Qadar",
+      "url": "https://itch.io/embed-upload/16022977?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Islamic Art and Harmony in Life",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Knowing 4 Imams of The School of Thought",
+      "url": "https://itch.io/embed-upload/16079723?color=333333",
+      "available": true,
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "subject": "CIVIC Level 7",
+  "grade": "7",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "The Diversity of the Indonesian Nation within the Framework of Bhinneka Tunggal Ika",
+      "url": "https://itch.io/embed-upload/16022982?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "The Territory of the Unitary State of the Republic of Indonesia",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

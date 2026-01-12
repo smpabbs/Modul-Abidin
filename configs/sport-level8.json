@@ -1,0 +1,62 @@
+{
+  "subject": "SPORT Level 8",
+  "grade": "8",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Handball",
+      "url": "https://itch.io/embed-upload/14444095?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Athletics",
+      "url": "https://itch.io/embed-upload/14944296?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Gymnastics",
+      "url": "https://itch.io/embed-upload/14944362?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Martial Arts Activities",
+      "url": "https://itch.io/embed-upload/14953642?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Physical Activity",
+      "url": "https://itch.io/embed-upload/14953913?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Bulu Tangkis",
+      "url": "https://itch.io/embed-upload/16022024?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Aktivitas Gerak berirama",
+      "url": "https://itch.io/embed-upload/16022596?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Menjaga Keselamatan di Jalan Raya",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Pencegahan Pergaulan Bebas",
+      "url": "https://www.canva.com/design/DAG9OqxrXy8/wrVqaYd5JAbW32hjhJCjBA/edit?utm_content=DAG9OqxrXy8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      "available": true,
+      "description": ""
+    }
+  ]
+}

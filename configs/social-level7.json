@@ -1,0 +1,32 @@
+{
+  "subject": "SOCIAL Level 7",
+  "grade": "7",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Social life and environmental conditions",
+      "url": "https://itch.io/embed-upload/14765788?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Neighbourhood Diversity",
+      "url": "https://itch.io/embed-upload/15041415?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Envirommental Economic Potential",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Community Empowerment",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

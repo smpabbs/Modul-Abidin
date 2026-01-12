@@ -1,0 +1,86 @@
+{
+  "subject": "MATH Level 7",
+  "grade": "7",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Integers",
+      "url": "https://itch.io/embed-upload/14258714?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Fraction",
+      "url": "https://itch.io/embed-upload/14557987?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Sets",
+      "url": "https://itch.io/embed-upload/14609892?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Algebra",
+      "url": "https://itch.io/embed-upload/14638601?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Linear Equation and Inequalities In One Variable",
+      "url": "https://itch.io/embed-upload/14658037?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Social Arithmetic",
+      "url": "https://itch.io/embed-upload/14748553?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Ratio & Proportion",
+      "url": "https://itch.io/embed-upload/16036183?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Statistics (Data Presentation)",
+      "url": "https://itch.io/embed-upload/16036241?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Ratio",
+      "url": "https://itch.io/embed-upload/16036183?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Lines and Angles",
+      "url": "https://itch.io/embed-upload/16069122?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Statistics (Data Presentation)",
+      "url": "https://itch.io/embed-upload/16036241?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Triangle",
+      "url": "https://itch.io/embed-upload/16069307?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Quadrilateral",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

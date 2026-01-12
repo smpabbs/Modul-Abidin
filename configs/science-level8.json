@@ -1,0 +1,32 @@
+{
+  "subject": "SCIENCE Level 8",
+  "grade": "8",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Cell: The Building Block of Life",
+      "url": "https://itch.io/embed-upload/14233861?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Vibration and Wave",
+      "url": "https://itch.io/embed-upload/16051343?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Elements, Compounds and Mixtures",
+      "url": "https://itch.io/embed-upload/16069624?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Structure of The Earth and Its Development",
+      "url": "https://itch.io/embed-upload/16063025?color=333333",
+      "available": true,
+      "description": ""
+    }
+  ]
+}

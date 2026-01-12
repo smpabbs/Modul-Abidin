@@ -149,6 +149,8 @@
             transition: all 0.2s;
             font-size: 0.85rem;
             width: 100%;
+            text-decoration: none;
+            display: block;
         }
         
         .level-7 {
@@ -169,6 +171,26 @@
         .level-btn:hover {
             transform: scale(1.03);
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .level-info {
+            font-size: 0.7rem;
+            margin-top: 2px;
+            font-style: italic;
+        }
+        
+        /* Info badge untuk jumlah chapter tersedia */
+        .chapter-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary-color);
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            z-index: 5;
         }
         
         /* Footer Styles */
@@ -336,10 +358,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/pancasila.jpg');">
+                            
                             <div class="level-options">
-                                <a href="buku/civic-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/civic-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/civic-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=civic-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=civic-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=civic-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -355,10 +378,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/math.jpg');">
+                          
                             <div class="level-options">
-                                <a href="buku/math-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/math-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/math-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=math-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=math-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=math-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -374,10 +398,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/sport.avif');">
+                         
                             <div class="level-options">
-                                <a href="buku/sport-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/sport-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/sport-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=sport-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=sport-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=sport-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -393,10 +418,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/javanese.jpg');">
+                          
                             <div class="level-options">
-                                <a href="buku/javanese-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/javanese-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/javanese-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=javanese-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=javanese-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=javanese-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -412,10 +438,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/social.jpg');">
+                          
                             <div class="level-options">
-                                <a href="buku/social-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/social-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/social-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=social-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=social-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=social-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -431,10 +458,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/science.jpg');">
+                        
                             <div class="level-options">
-                                <a href="buku/science-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/science-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/science-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=science-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=science-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=science-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -450,10 +478,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/ict.jpg');">
+                        
                             <div class="level-options">
-                                <a href="buku/ictnon-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/ictnon-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/ictnon-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=informatika-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=informatika-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=informatika-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -469,10 +498,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/ict_progul.jpg');">
+                         
                             <div class="level-options">
-                                <a href="buku/ict-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/ict-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/ict-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=ict-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=ict-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=ict-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -488,10 +518,11 @@
                 <div class="col-sm-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
                     <div class="book-card" onclick="toggleLevelOptions(this)">
                         <div class="book-illustration" style="background-image: url('./asset/ife.png');">
+                        
                             <div class="level-options">
-                                <a href="buku/ife-level7.html" class="level-btn level-7">Level 7</a>
-                                <a href="buku/ife-level8.html" class="level-btn level-8">Level 8</a>
-                                <a href="buku/ife-level9.html" class="level-btn level-9">Level 9</a>
+                                <a href="template-module.html?config=ife-level7.json" class="level-btn level-7">Level 7</a>
+                                <a href="template-module.html?config=ife-level8.json" class="level-btn level-8">Level 8</a>
+                                <a href="template-module.html?config=ife-level9.json" class="level-btn level-9">Level 9</a>
                             </div>
                         </div>
                         <div class="book-title">
@@ -513,46 +544,45 @@
             <div class="logo-section">
                 <!-- Logo 1 -->
                 <div class="logo-item">
-                    <img src="./logo smp abbs.png" alt="Partner Logo 1">
+                    <img src="./asset/logo smp abbs.png" alt="Partner Logo 1">
                 </div>
                 
                 <!-- Logo 2 -->
                 <div class="logo-item">
-                    <img src="./Logo smpii boyolali2.png" alt="Partner Logo 2">
+                    <img src="./asset/Logo smpii boyolali2.png" alt="Partner Logo 2">
                 </div>
                 
                 <!-- Logo 3 -->
                 <div class="logo-item">
-                    <img src="./logo smpii karanganyar.png" alt="Partner Logo 3">
+                    <img src="./asset/logo smpii karanganyar.png" alt="Partner Logo 3">
                 </div>
                 
                 <!-- Logo 4 -->
                 <div class="logo-item">
-                    <img src="./logo smpii klaten.png" alt="Partner Logo 4">
+                    <img src="./asset/logo smpii klaten.png" alt="Partner Logo 4">
                 </div>
                 
                 <!-- Logo 5 -->
                 <div class="logo-item">
-                    <img src="./logo smpii salatiga.jpg" alt="Partner Logo 5">
+                    <img src="./asset/logo smpii salatiga.jpg" alt="Partner Logo 5">
                 </div>
                 
                 <!-- Logo 6 -->
                 <div class="logo-item">
-                    <img src="./logo smpii sukoharjo.png" alt="Partner Logo 6">
+                    <img src="./asset/logo smpii sukoharjo.png" alt="Partner Logo 6">
                 </div>
                 
                 <!-- Logo 7 -->
                 <div class="logo-item">
-                    <img src="./Logo smpii yogya.png" alt="Partner Logo 7">
+                    <img src="./asset/Logo smpii yogya.png" alt="Partner Logo 7">
                 </div>
                  <!-- Logo 7 -->
                 <div class="logo-item">
-                    <img src="./logo smpi surakarta.png" alt="Partner Logo 7">
+                    <img src="./asset/logo smpi surakarta.png" alt="Partner Logo 7">
                 </div>
             </div>
             
             <div class="footer-text">
-                
                 <p class="copyright">© 2025 E-Modul Unit SMP Yayasan Al Abidin.</p>
             </div>
         </div>
@@ -584,10 +614,38 @@
                 });
             }
         });
+        
+        // Check if template-module.html exists (untuk debugging)
+        function checkTemplateExists() {
+            fetch('template-module.html')
+                .then(response => {
+                    if (!response.ok) {
+                        console.warn('⚠️ File template-module.html tidak ditemukan! Pastikan file ada di folder root.');
+                        alert('Perhatian: File template-module.html tidak ditemukan. Pastikan file ada di folder yang sama dengan index.html');
+                    } else {
+                        console.log('✅ File template-module.html ditemukan.');
+                    }
+                })
+                .catch(error => {
+                    console.error('❌ Error checking template:', error);
+                });
+        }
+        
+        // Panggil fungsi check saat halaman dimuat
+        window.addEventListener('load', checkTemplateExists);
+        
+        // Tambahkan efek hover yang lebih smooth
+        document.querySelectorAll('.level-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
     </script>
 </body>
 </html>
-
-
-
-

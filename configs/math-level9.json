@@ -1,0 +1,20 @@
+{
+  "subject": "MATH Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Statistics",
+      "url": "https://itch.io/embed-upload/14467442?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Curved surface solid",
+      "url": "https://itch.io/embed-upload/16025045?color=333333",
+      "available": true,
+      "description": ""
+    }
+  ]
+}

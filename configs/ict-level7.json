@@ -1,0 +1,86 @@
+{
+  "subject": "ICT Level 7",
+  "grade": "7",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Introducing ICT",
+      "url": "https://itch.io/embed-upload/14867731?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Computer",
+      "url": "https://itch.io/embed-upload/11859776?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Word Processing",
+      "url": "https://itch.io/embed-upload/11860540?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Spreadsheet",
+      "url": "https://itch.io/embed-upload/14962160?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Appsheet",
+      "url": "https://itch.io/embed-upload/11603225?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Pengenalan Inkscape",
+      "url": "https://www.canva.com/design/DAG9Ol1n-Lc/AxMmmMieS3KqCyPzqsSw7A/view?utm_content=DAG9Ol1n-Lc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e36b344fa",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Projek membuat logo",
+      "url": "https://www.canva.com/design/DAG9Ol1n-Lc/AxMmmMieS3KqCyPzqsSw7A/view?utm_content=DAG9Ol1n-Lc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e36b344fa",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Projek membuat aset game",
+      "url": "https://www.canva.com/design/DAG9Ol1n-Lc/AxMmmMieS3KqCyPzqsSw7A/view?utm_content=DAG9Ol1n-Lc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3e36b344fa",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Pengenalan Construct 3",
+      "url": "https://itch.io/embed-upload/16024166?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Projek membuat Flappy Bird",
+      "url": "https://itch.io/embed-upload/16042186?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Projek membuat Space Shooter's",
+      "url": "https://itch.io/embed-upload/16072161?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Projek membuat Maze Game",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Projek membuat Quiz",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

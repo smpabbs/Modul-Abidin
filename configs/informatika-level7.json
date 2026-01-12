@@ -1,0 +1,44 @@
+{
+  "subject": "INFORMATIKA non ICT Level 7",
+  "grade": "7",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Information and Communication Technology",
+      "url": "https://itch.io/embed-upload/14375285?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Computer System",
+      "url": "https://itch.io/embed-upload/14384147?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Introduction PictoBlox",
+      "url": "https://module-pictoblox.vercel.app/",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Loops & Repetition",
+      "url": "https://module-pictoblox.vercel.app/",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Conditionals & Logic",
+      "url": "https://module-pictoblox.vercel.app/",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Dampak Sosial Informatika",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

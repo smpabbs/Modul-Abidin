@@ -1,0 +1,50 @@
+{
+  "subject": "JAVANESE Level 7",
+  "grade": "7",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Teks Narasi : Kirab 1 Suro",
+      "url": "https://itch.io/embed-upload/14560053?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Tembung Lingga",
+      "url": "https://itch.io/embed-upload/14596507?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Dongeng",
+      "url": "https://itch.io/embed-upload/15381109?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Serat Wulangreh Macapat Pangkur",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Cerita Rakyat",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Aksara Jawa Pasangan",
+      "url": "",
+      "available": false,
+      "description": ""
+    },
+    {
+      "title": "Ukara Tanduk Tanggap",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

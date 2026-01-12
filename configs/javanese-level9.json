@@ -1,0 +1,44 @@
+{
+  "subject": "JAVANESE Level 9",
+  "grade": "9",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "Narrative Text – Etiquette in Javanese Folktales",
+      "url": "https://itch.io/embed-upload/14375311?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Teks Wulangreh Pupuh Durma Moral Teaching Text in Durma Verse",
+      "url": "https://itch.io/embed-upload/15464473?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Teks SesorahJavanese Speech Text",
+      "url": "https://itch.io/embed-upload/15464505?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "serat wulangreh dhandhanggula",
+      "url": "https://itch.io/embed-upload/16052698?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Cerita wayang ramayana (Anoman duta)",
+      "url": "https://itch.io/embed-upload/16069977?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Naskah Aksara jawa",
+      "url": "",
+      "available": false,
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "subject": "SCIENCE Level 7",
+  "grade": "7",
+  "school": "SMP Al Abidin Surakarta",
+  "author": "Tim Pengajar",
+  "chapters": [
+    {
+      "title": "The Nature of Science",
+      "url": "https://itch.io/embed-upload/14718388?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Classification of Organisms",
+      "url": "https://itch.io/embed-upload/16045215?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Ecology and Biodiversity in Indonesia",
+      "url": "https://itch.io/embed-upload/16069591?color=333333",
+      "available": true,
+      "description": ""
+    },
+    {
+      "title": "Solar System",
+      "url": "https://itch.io/embed-upload/16026152?color=333333",
+      "available": true,
+      "description": ""
+    }
+  ]
+}
