@@ -567,7 +567,7 @@
         function init() {
             elements.subjectTitle.textContent = CONFIG.subject;
             elements.subjectGrade.textContent = CONFIG.grade ? `Kelas ${CONFIG.grade}` : '';
-            elements.subjectInfo.textContent = `${CONFIG.subject} • ${CONFIG.school || 'SMP Al Abidin Surakarta'}`;
+            elements.subjectInfo.textContent = `${CONFIG.subject} • ${CONFIG.school || ''}`;
             renderChapterList();
             loadChapter(0);
             attachEventListeners();
